@@ -222,13 +222,7 @@ function get_sandbox_context() {
   window[my_win_id].location = 'data:application/x-moz-playpreview-pdfjs;,';
   object.data = 'data:text/html,<'+'html/>';
   window[my_win_id].frameElement.insertAdjacentHTML('beforebegin', '<iframe style='+
-    '"position:absolute; left:-9999px;" onload = "'+_(function(){
-    window.wrappedJSObject.sandboxContext=(function(cmd) {
-      with(importFunction.constructor('return this')()) {
-        return eval(cmd);
-      }
-    });
-  }) + '"/>');
+    '"position:absolute; left:-9999px;" />');
 }
 
 
